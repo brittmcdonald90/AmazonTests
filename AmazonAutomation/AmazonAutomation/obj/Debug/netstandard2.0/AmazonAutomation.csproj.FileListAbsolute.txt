@@ -1,0 +1,9 @@
+C:\repos\AmazonTests\AmazonAutomation\AmazonAutomation\bin\Debug\netstandard2.0\AmazonAutomation.deps.json
+C:\repos\AmazonTests\AmazonAutomation\AmazonAutomation\bin\Debug\netstandard2.0\AmazonAutomation.dll
+C:\repos\AmazonTests\AmazonAutomation\AmazonAutomation\obj\Debug\netstandard2.0\AmazonAutomation.csprojAssemblyReference.cache
+C:\repos\AmazonTests\AmazonAutomation\AmazonAutomation\obj\Debug\netstandard2.0\AmazonAutomation.csproj.CoreCompileInputs.cache
+C:\repos\AmazonTests\AmazonAutomation\AmazonAutomation\obj\Debug\netstandard2.0\AmazonAutomation.AssemblyInfoInputs.cache
+C:\repos\AmazonTests\AmazonAutomation\AmazonAutomation\obj\Debug\netstandard2.0\AmazonAutomation.AssemblyInfo.cs
+C:\repos\AmazonTests\AmazonAutomation\AmazonAutomation\bin\Debug\netstandard2.0\AmazonAutomation.pdb
+C:\repos\AmazonTests\AmazonAutomation\AmazonAutomation\obj\Debug\netstandard2.0\AmazonAutomation.dll
+C:\repos\AmazonTests\AmazonAutomation\AmazonAutomation\obj\Debug\netstandard2.0\AmazonAutomation.pdb
