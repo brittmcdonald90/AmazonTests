@@ -4,3 +4,9 @@ AmazonAutomation/\.vs/
 AmazonAutomation/packages/
 
 AmazonAutomation/AmazonAutomation/bin/
+
+AmazonAutomation/AmazonAutomation/obj/
+
+AmazonAutomation/AmazonTests/bin/
+
+AmazonAutomation/AmazonTests/obj/
