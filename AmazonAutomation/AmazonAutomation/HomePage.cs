@@ -20,5 +20,14 @@ namespace AmazonAutomation
         {
             Driver.Instance.Navigate().GoToUrl("https://www.amazon.com/");
         }
+
+        public static void Search(string searchText)
+        {
+            var searchInput = Driver.Instance.FindElement(By.Id("twotabsearchtextbox"));
+            searchInput.SendKeys(searchText);
+
+            var searchButton = Driver.Instance.FindElement(By.ClassName("nav-input"));
+            searchButton.Click();
+        }
     }
 }
