@@ -13,11 +13,13 @@ namespace AmazonAutomation
         {
             Instance = new FirefoxDriver();
             Instance.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            Instance.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(5);
         }
 
         public static void Close()
         {
-            //throw new NotImplementedException();
+            Instance.Close();
+
         }
     }
 }
