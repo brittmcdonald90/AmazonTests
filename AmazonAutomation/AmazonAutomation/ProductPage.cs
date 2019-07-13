@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace AmazonAutomation
 {
@@ -22,8 +23,8 @@ namespace AmazonAutomation
 
         public static void AddToCart()
         {
-            var addToCartButton = Driver.Instance.FindElement(By.Id("add-to-cart-button"));
-            addToCartButton.Click();
+            Thread.Sleep(3000);
+            Driver.Instance.FindElement(By.Id("add-to-cart-button")).Click();
         }
     }
 }

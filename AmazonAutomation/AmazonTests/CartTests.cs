@@ -26,6 +26,23 @@ namespace AmazonTests
             CartPage.DeleteProduct(productName);
             Assert.IsTrue(CartPage.IsEmpty);
         }
+        [TestMethod]
+        public void Change_Quantity()
+        {
+            ProductPage.GoTo();
+            string productName = ProductPage.ProductName.Split(' ')[0].ToLower();
+            ProductPage.AddToCart();
+
+            CartPage.GoTo();
+            CartPage.ChangeQuantity(productName, 2);
+            // change productprice to afunction so price is up to date
+            var cartTotal = CartPage.ProductPrice * 2;
+            var subTotal = CartPage.SubTotal;
+            Assert.AreEqual(subTotal, cartTotal);
+
+            CartPage.DeleteProduct(productName);
+            Assert.IsTrue(CartPage.IsEmpty);
+        }
 
         [TestCleanup]
         public void Cleanup()
