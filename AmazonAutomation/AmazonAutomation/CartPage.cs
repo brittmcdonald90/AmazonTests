@@ -50,13 +50,6 @@ namespace AmazonAutomation
             Thread.Sleep(2000);
         }
 
-        public static object GetSubtotal()
-        {
-            return float.Parse(Driver.Instance.FindElement(
-                By.CssSelector(".sc-price-sign")).Text.Replace("$", "")
-            );
-        }
-
         public static void GoTo()
         {
             Driver.Instance.Navigate().GoToUrl("https://www.amazon.com/gp/cart/view.html?ref_=nav_cart");

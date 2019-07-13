@@ -61,6 +61,7 @@
     <Compile Include="SearchTests.cs" />
     <Compile Include="CartTests.cs" />
     <Compile Include="QuantityTest.cs" />
+    <Compile Include="WishListTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
