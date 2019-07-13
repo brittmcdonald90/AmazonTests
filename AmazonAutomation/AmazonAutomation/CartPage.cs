@@ -20,11 +20,11 @@ namespace AmazonAutomation
         {
             get
             {
-                return SubTotal == 0.00;
+                return Subtotal == 0.00;
             }
         }
 
-        public static float SubTotal
+        public static float Subtotal
         {
             get
             {
@@ -50,6 +50,13 @@ namespace AmazonAutomation
             Thread.Sleep(2000);
         }
 
+        public static object GetSubtotal()
+        {
+            return float.Parse(Driver.Instance.FindElement(
+                By.CssSelector(".sc-price-sign")).Text.Replace("$", "")
+            );
+        }
+
         public static void GoTo()
         {
             Driver.Instance.Navigate().GoToUrl("https://www.amazon.com/gp/cart/view.html?ref_=nav_cart");
@@ -57,10 +64,10 @@ namespace AmazonAutomation
 
         public static void ChangeQuantity(string productName, int quantity)
         {
-            Thread.Sleep(4000);
+            Thread.Sleep(3000);
             Driver.Instance.FindElement(By.Id("a-autoid-0-announce")).Click();
-            //Driver.Instance.FindElement(By.CssSelector("select[name = 'quantity']")).Click();
             Driver.Instance.FindElement(By.Id("dropdown1_" + (quantity - 1))).Click();
+            Thread.Sleep(2000);
         }
     }
 }

@@ -35,10 +35,7 @@ namespace AmazonTests
 
             CartPage.GoTo();
             CartPage.ChangeQuantity(productName, 2);
-            // change productprice to afunction so price is up to date
-            var cartTotal = CartPage.ProductPrice * 2;
-            var subTotal = CartPage.SubTotal;
-            Assert.AreEqual(subTotal, cartTotal);
+            Assert.AreEqual(CartPage.ProductPrice * 2, CartPage.Subtotal);
 
             CartPage.DeleteProduct(productName);
             Assert.IsTrue(CartPage.IsEmpty);
