@@ -26,5 +26,13 @@ namespace AmazonAutomation
             Thread.Sleep(3000);
             Driver.Instance.FindElement(By.Id("add-to-cart-button")).Click();
         }
+
+        public static void AddToWishList()
+        {
+            Thread.Sleep(3000);
+            Driver.Instance.FindElement(By.Id("add-to-wishlist-button")).Click();
+            Thread.Sleep(3000);
+            Driver.Instance.FindElement(By.CssSelector("#atwl-dd-ul li")).Click();
+        }
     }
 }

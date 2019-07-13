@@ -24,7 +24,22 @@ namespace AmazonTests
             WishListPage.CreateList(wishListName);
             Assert.AreEqual(wishListName, WishListPage.WishListName);
         }
+        [TestMethod]
+        public void Add_Product_To_Wish_List()
+        {
+            LoginPage.GoTo();
+            LoginPage.LoginAs("brittmcdonald90@gmail.com").WithPassword("Testpassword1").Login();
 
+            ProductPage.GoTo();
+            var productName = ProductPage.ProductName;
+            ProductPage.AddToWishList();
+            WishListPage.GoTo();
+            Assert.AreEqual(productName, WishListPage.ProductName);
+
+            WishListPage.DeleteProduct(productName);
+            WishListPage.GoTo();
+            Assert.IsTrue(WishListPage.IsEmpty);
+        }
         [TestCleanup]
         public void Cleanup()
         {

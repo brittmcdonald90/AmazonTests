@@ -16,6 +16,23 @@ namespace AmazonAutomation
             }
         }
 
+        public static string ProductName
+        {
+            get
+            {
+                return Driver.Instance.FindElement(By.CssSelector("li .a-row .a-link-normal")).Text;
+            }
+        }
+
+        public static bool IsEmpty
+        {
+            get
+            {
+                return Driver.Instance.FindElement(By.CssSelector("#no-items-section span span")).Text.Split(' ')[0] == "0";
+
+            }
+        }
+
         public static void GoTo()
         {
             Driver.Instance.Navigate().GoToUrl("https://www.amazon.com/gp/registry/wishlist/?ie=UTF8&ref_=topnav_storetab_wl");
@@ -32,6 +49,12 @@ namespace AmazonAutomation
             Driver.Instance.FindElement(By.Id("WLNEW_list_name")).SendKeys(listName);
             Driver.Instance.FindElement(By.Id("WLNEW_create")).Click();
             Thread.Sleep(2500);
+        }
+
+        public static void DeleteProduct(string productName)
+        {
+            Driver.Instance.FindElement(By.CssSelector("input[name='submit.deleteItem']")).Click();
+            
         }
     }
 }
