@@ -62,6 +62,8 @@
     <Compile Include="CartTests.cs" />
     <Compile Include="QuantityTest.cs" />
     <Compile Include="PrimeVideoTest.cs" />
+    <Compile Include="AccountTests.cs" />
+    <Compile Include="AmazonBaseTests.cs" />
     <Compile Include="WishListTest.cs" />
   </ItemGroup>
   <ItemGroup>
